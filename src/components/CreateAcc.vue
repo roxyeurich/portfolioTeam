@@ -15,7 +15,7 @@
         <tr>
           <td>
               <div class="forminput">
-                <b-form-group id="exampleInputGroup1" label-for="exampleInput1">
+                <b-form-group class="exampleInputGroup1" label-for="exampleInput1">
                     <b-form-input v-model="username" class="exampleInput1" placeholder="Username"></b-form-input>
                 </b-form-group>
               </div>
@@ -25,7 +25,7 @@
          <tr>
           <td>
               <div class="forminput">
-                <b-form-group id="exampleInputGroup1" label-for="exampleInput1">
+                <b-form-group class="exampleInputGroup1" label-for="exampleInput1">
                     <b-form-input v-model="fname" class="exampleInput1" placeholder="Name"></b-form-input>
                 </b-form-group>
               </div>
@@ -35,7 +35,7 @@
          <tr>
           <td>
               <div class="forminput">
-                <b-form-group id="exampleInputGroup1" label-for="exampleInput1">
+                <b-form-group class="exampleInputGroup1" label-for="exampleInput1">
                     <b-form-input v-model="lname" class="exampleInput1" placeholder="Last Name"></b-form-input>
                 </b-form-group>
               </div>
@@ -45,7 +45,7 @@
          <tr>
           <td>
               <div class="forminput">
-                <b-form-group id="exampleInputGroup1" label-for="exampleInput1">
+                <b-form-group class="exampleInputGroup1" label-for="exampleInput1">
                     <b-form-input v-model="age" class="exampleInput1" placeholder="Age"></b-form-input>
                 </b-form-group>
               </div>
@@ -55,7 +55,7 @@
         <tr>
           <td>
             <div class="forminput">
-                <b-form-group id="exampleInputGroup1" label-for="exampleInput1">
+                <b-form-group class="exampleInputGroup1" label-for="exampleInput1">
                     <b-form-input v-model="email" class="exampleInput1" placeholder="Email"></b-form-input>
                 </b-form-group>
               </div>
@@ -64,7 +64,7 @@
         <tr>
           <td>
             <div class="forminput">
-                <b-form-group id="exampleInputGroup1" label-for="exampleInput1">
+                <b-form-group class="exampleInputGroup1" label-for="exampleInput1">
                     <b-form-input type="password" v-model="password" class="exampleInput1" placeholder="Password"></b-form-input>
                 </b-form-group>
               </div>
@@ -93,13 +93,13 @@
 </b-row>
 
 </b-container>
-
+ 
 
 </template>
 
 <script>
 export default {
-  name: 'LogInForm',
+  name: 'CreateAcc',
   props: {
     msg: String
   },

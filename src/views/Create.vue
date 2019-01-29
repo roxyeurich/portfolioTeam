@@ -1,16 +1,16 @@
 <template>
-  <div id="Login">
+  <div id="Create">
 
-    <loginform/>
-  </div> 
+    <registerform/>
+  </div>
 </template>
 
 <script>
-import LogIn_Page from '@/components/LogIn_Page.vue'
+import CreateAcc from '@/components/CreateAcc.vue'
 export default {
-  name: 'Login',
+  name: 'Create',
   components: {
-    loginform: LogIn_Page
+    registerform: CreateAcc
   },
   data () {
     return {

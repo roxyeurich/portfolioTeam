@@ -8,7 +8,7 @@
   <div>
   <table class="uploadtable">
     <div class="upload">
-    <tr>
+    <tr> 
       <td>
         <b-form-group id="exampleInputGroup2" label="Portfolio Title">
             <div class="uploadinput">

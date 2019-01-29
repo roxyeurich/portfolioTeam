@@ -3,6 +3,7 @@ import Router from 'vue-router'
 import Home from './views/Home.vue'
 import Login from './views/Login.vue'
 import posts from './views/Post.vue'
+import Create from './views/Create.vue'
 
 Vue.use(Router) 
 
@@ -24,6 +25,11 @@ export default new Router({
       path: '/posts',
       name: 'posts',
       component: posts
+    },
+    {
+      path: '/create',
+      name: 'create',
+      component: Create
     },
     {
       path: '/about',
