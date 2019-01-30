@@ -33,13 +33,13 @@
         <tr>
           <td>
             <div id="signin">
-              <b-button type="submit" @click="LogIn" id="submit">Log In</b-button>
+              <b-button type="submit" @click="SubmitConfirm" id="submit">Log In</b-button>
             </div>
           </td>
           <td>
             <div id="signup">
              <router-link to="/Create">
-              <b-button type="submit" id="submit">Create Account</b-button>
+              <b-button type="submit" @click="SubmitConfirm" id="submit">Create Account</b-button>
              </router-link> 
             </div>
           </td>
@@ -61,38 +61,44 @@ export default {
     msg: String
   },
     methods:{
-    LogIn: async function(){
+    SubmitConfirm: async function(){
       
       var fd= new FormData();
-      fd.append("username", this.username);
       fd.append("password", this.password);
+      fd.append("username", this.username);
       
       for(var key of fd.entries()){
         console.log(key);
       }
       
-      var resp=await fetch("https://portfolioteam.herokuapp.com/login.php",{
+      var resp=await fetch("https://portfolioteam.herokuapp.com/register.php",{
       method:"POST",
       body:fd
         });
-      //console.log(resp);
+      
       var json = await resp.text();
       console.log(json);
       
-    if (json === true) {
-      alert ("Loged in!");
-      
-    } else {
-      alert ("Something is wrong!");
-    }
-      
-      
-    }
+      alert("Thank you for registering!");
+      }
   },
     data () {
     return {
-      username:"",
+      fname:"",
+      lname:"",
       password:"",
+      email:"",
+      username:"",
+      age:"",
+      location:"",
+      options: [
+        { value: null, text: 'Location' },
+        { value: 'a', text: 'Canada' },
+        { value: 'b', text: 'United States' },
+        { value: 'c', text: 'South America' },
+        { value: 'd', text: 'Europe' },
+        { value: 'e', text: 'Asia'}
+      ]
     }
   }
 }
