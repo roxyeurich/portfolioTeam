@@ -1,0 +1,181 @@
+form{
+    height: 900px;
+}
+
+.h1form{
+    color: #ff7272;
+    width:  100%;
+    font-family: futura-pt, sans-serif;
+    font-weight: 700;
+    font-style: normal;
+}
+
+.formtable{
+    width: 50vw;
+    height: 380px;
+    float: right;
+}
+
+.forminput #exampleInputGroup1{
+    border: none;
+}
+
+.exampleInput1{ 
+    background-color: #f5f5f5;
+    border: none;
+    border-radius: 0px;
+    font-size: 12px;
+    padding: 12px 20px;
+    width: 100%;
+    opacity: 0.8;
+}
+
+#submit{
+    margin: 0 auto;
+    padding: 10px 35px 10px 35px;
+    font-family: futura-pt, sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    background-color: #ff7272;
+    border: none;
+    width: 250px;
+}
+
+#signup{
+    width: 100%;
+}
+
+.formdropdown{
+    width: 100%;
+}
+
+
+#mb-3{
+    background-color: #f5f5f5;
+    border: none;
+    border-radius: 0px;
+    font-size: 12px;
+    padding: 12px 20px;
+    opacity: 0.8;
+}
+
+.visuals{
+    background-color: rgb(255, 114, 114);
+    height: 50vh;
+    width: 100%;
+    position: relative;
+    opacity: 0.9;
+    float: left;
+    min-height: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    -webkit-background-size: cover;
+    background-size: cover;
+}
+
+.uploadtable{
+    margin: 0 auto;
+    border: solid 1.5px #e0e0e0;
+    box-shadow:  5px 5px 20px #bababa;
+}
+
+.upload{
+    padding: 40px;
+}
+
+.uploadtable{
+    margin-top: 50px;
+    margin-bottom: 50px;
+    height: 50vh;
+}
+
+
+#uploadinput {
+    border: none;
+    border-bottom: solid .3px black;
+    border-radius: 0px;
+    margin-top: -10px;
+}
+
+.portfoliotitle{
+    float: left;
+    font-size: 1.1em;
+    font-family: futura-pt, sans-serif;
+    font-weight: 800;
+    font-style: normal;
+}
+
+.formarea{
+    float: left;
+    border: solid 0.1px #dedede;
+    box-shadow:  1px 1px 4px #bababa;
+    width: 100%;
+}
+
+#textarea1{
+    width: 100%;
+}
+
+.bg-img{
+    background-image: url(../img/rawpixel-678089-unsplash.jpg);
+    min-height: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    -webkit-background-size: cover;
+    background-size: cover;
+    color: white;
+    z-index: -1;
+    width: 98vw;
+}
+
+.img-overlay {
+    background: rgba(255, 114, 114, 0.8);
+    background-repeat: no-repeat;
+    background-position: center;
+    -webkit-background-size: cover;
+    background-size: cover;
+    z-index: -1;
+    height: 50vh;
+    width: 98vw;
+}
+
+#portfoliobutton{
+    margin: 0 auto;
+    padding: 10px 35px 10px 35px;
+    font-family: futura-pt, sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    background-color: #ff7272;
+    border: none;
+    margin-left: 217px;
+}
+
+
+
+.portfoliotext{
+    padding-top: 130px;
+}
+
+@media only screen and (max-width:800px){
+    .visuals{
+        display: none;
+    }
+    
+    .formtable{
+        width: 100vw;
+    }
+    
+    .formtable{
+        width: 200px;
+    }
+}
+
+.dropdown{
+    width: 50vw;
+}
+
+
+#submitupload{
+    width: 545px;
+}
+
