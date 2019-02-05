@@ -75,11 +75,11 @@
             <div class="formdropdown">
                   <b-form-select v-model="location" :options="options" id="mb-3" >
                   </b-form-select>
-                  {{location}}
+                <br>
             </div>
           </td>
         </tr>
-
+            <br>
         <tr>
           <td>
             <div id="signup">

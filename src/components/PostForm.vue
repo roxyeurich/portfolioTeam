@@ -25,7 +25,7 @@
           <td>
               <div class="forminput">
                 <b-form-group class="uploadtitle" label-for="portfoliotitle">
-                    <b-form-input v-model="title" id="uploadinput" placeholder=""></b-form-input>
+                    <b-form-input v-model="Title" id="uploadinput" placeholder=""></b-form-input>
                 </b-form-group>
               </div>
           </td>
@@ -39,7 +39,7 @@
           <td>
               <div class="formarea">
                 <b-form-textarea id="textarea1"
-                     v-model="description"
+                     v-model="text"
                      placeholder="Be as descriptive as possible"
                      :rows="3"
                      :max-rows="6"
@@ -51,13 +51,13 @@
     <tr><br>
       <b-row>
         <b-col class="dropdown">
-            <label class="portfoliotitle">Category</label>
-            <b-form-select v-model="category" :options="options" id="submitdropdown" >
+            <label class="portfoliotitle">Categories</label>
+            <b-form-select v-model="categories" :options="options" id="submitdropdown" >
                   </b-form-select>
         </b-col> 
         <b-col class="dropdown">
             <label class="portfoliotitle">Programs Used</label>
-            <b-form-select v-model="software" :options="options1" id="submitdropdown" >
+            <b-form-select v-model="programs" :options="options1" id="submitdropdown" >
                   </b-form-select>
         </b-col>
     </b-row>
@@ -67,7 +67,7 @@
       <td>
         <div>
   <!-- Styled -->
-  <b-form-file type="file" v-model="file" :state="Boolean(file)" placeholder="Upload images of your portfolio"  id="submitupload"></b-form-file>
+  <b-form-file v-model="file" :state="Boolean(file)" placeholder="Upload images of your portfolio"  id="submitupload"></b-form-file>
   <div class="mt-3">Selected file: {{file && file.name}}
     </div>
     </div>
@@ -96,52 +96,28 @@ export default {
     msg: String
   },
     methods:{
-    SubmitConfirm: async function(){
-      
-      var fd= new FormData();
-      fd.append("title", this.title);
-      fd.append("description", this.description);
-      fd.append("category", this.category);
-      fd.append("software", this.software);
-      fd.append("images", this.file);
-      
-      
-      for(var key of fd.entries()){
-        console.log(key);
+    SubmitConfirm: function(){
+      alert("Thank you for register!");
       }
-      //https://portfolioteam.herokuapp.com/portfolioUpload.php
-      var resp=await fetch("http://localhost:8888/portfolio_DB/portfolioUpload.php",{
-      method:"POST",
-      body:fd
-        });
-      
-      var json = await resp.text();
-      console.log(json);
-      
-      alert("Your portfolio has been uploaded!");
-      this.$router.push('/'); 
-      }
-      
-      
     },
     
   data(){
       return{
-          title:"",
-           description:"",
-           file: "",
-           category:"",
+           text:'',
+           file: null,
+           file2: null,
+           categories:"",
         options: [
-        { value: "", text: 'Category' },
+        { value: null, text: 'Categories' },
         { value: 'a', text: 'Graphic Design' },
         { value: 'b', text: 'UI/UX Design' },
         { value: 'c', text: 'Web Development' },
         { value: 'd', text: 'Story Telling' },
         { value: 'e', text: 'Branding'}
       ],
-          software:"",
+          programs:"",
            options1: [
-        { value: "", text: 'Software' },
+        { value: null, text: 'Programs' },
         { value: 'f', text: 'Hand Coded' },
         { value: 'g', text: 'Bootstrap' },
         { value: 'h', text: 'Photoshop' },

@@ -82,7 +82,7 @@ export default {
       console.log(json);
       
     if (json === true) {
-      //alert ("Loged in!");
+      alert ("Loged in!");
       this.$router.push('/') 
       
     } else {
