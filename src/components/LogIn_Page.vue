@@ -33,13 +33,13 @@
         <tr>
           <td>
             <div id="signin">
-              <b-button type="submit" @click="SubmitConfirm" id="submit">Log In</b-button>
+              <b-button type="submit" @click="LogIn" id="submit">Log In</b-button>
             </div>
           </td>
           <td>
             <div id="signup">
              <router-link to="/Create">
-              <b-button type="submit" @click="SubmitConfirm" id="submit">Create Account</b-button>
+              <b-button type="submit" id="submit">Create Account</b-button>
              </router-link> 
             </div>
           </td>
@@ -61,44 +61,41 @@ export default {
     msg: String
   },
     methods:{
-    SubmitConfirm: async function(){
+    LogIn: async function(){
       
       var fd= new FormData();
-      fd.append("password", this.password);
       fd.append("username", this.username);
+      fd.append("password", this.password);
       
       for(var key of fd.entries()){
         console.log(key);
       }
       
-      var resp=await fetch("https://portfolioteam.herokuapp.com/register.php",{
+      //http://localhost:8888/portfolio_DB/login.php
+      //https://portfolioteam.herokuapp.com/login.php
+      var resp=await fetch("https://portfolioteam.herokuapp.com/login.php  ",{
       method:"POST",
       body:fd
         });
-      
-      var json = await resp.text();
+      //console.log(resp);
+      var json = await resp.json();
       console.log(json);
       
-      alert("Thank you for registering!");
-      }
+    if (json === true) {
+      //alert ("Loged in!");
+      this.$router.push('/') 
+      
+    } else {
+      alert ("Something is wrong!");
+    }
+      
+      
+    }
   },
     data () {
     return {
-      fname:"",
-      lname:"",
-      password:"",
-      email:"",
       username:"",
-      age:"",
-      location:"",
-      options: [
-        { value: null, text: 'Location' },
-        { value: 'a', text: 'Canada' },
-        { value: 'b', text: 'United States' },
-        { value: 'c', text: 'South America' },
-        { value: 'd', text: 'Europe' },
-        { value: 'e', text: 'Asia'}
-      ]
+      password:"",
     }
   }
 }

@@ -128,6 +128,7 @@ export default {
       console.log(json);
       
       alert("Thank you for registering!");
+      this.$router.push('/'); 
       }
   },
     data () {
